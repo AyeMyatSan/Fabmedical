@@ -1,4 +1,6 @@
-s workflow is triggered on push to the 'content-web' directory of the  main branch of the repository
+name: content-web
+
+# This workflow is triggered on push to the 'content-web' directory of the  main branch of the repository
 on:
    push:
       branches:
@@ -12,9 +14,9 @@ on:
 # Environment variables are defined so that they can be used throughout the job definitions.
 env:
   imageRepository: 'content-web'
-  resourceGroupName: 'fabmedical-Y03'
+  resourceGroupName: 'fabmedical-ayadev3'
   containerRegistryName: 'fabmedicalY03'
-  containerRegistry: 'fabmedicalY03.azurecr.io'
+  containerRegistry: 'fabmedicaly03.azurecr.io'
   dockerfilePath: './content-web'
   tag: '${{ github.run_id  }}'
 
